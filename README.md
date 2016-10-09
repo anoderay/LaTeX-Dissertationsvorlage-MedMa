@@ -4,10 +4,10 @@ Hier finden Sie eine *inoffizielle* LaTeX-Vorlage zur Dissertation an der Medizi
 
 Die Vorlage soll in naher Zukunft von der Promotionskonferenz abgesegnet werden um dann ggf. auch über die Fakultät zur Verfügung gestellt zu werden. 
 
-## Version
+### Version
 0.1
 
-## Lizenz
+### Lizenz
 **MIT Lizenz**
 
 Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, inklusive und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu verändern, zusammenzufügen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
