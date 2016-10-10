@@ -3,7 +3,7 @@
 %     Präambel
 %----------------------------------------------------------------------------
 \documentclass{scrreprt}
-\KOMAoptions{fontsize=12pt,DIV=calc} %Für druckreifen, zweiseitigen-Satzspiegel die Option "twoside" bei diesem Befehl einfügen und die beiden Befehle in Zeile 34+35 auskommentieren
+\KOMAoptions{fontsize=12pt,DIV=calc} %Für druckreifen, zweiseitigen-Satzspiegel die Option "twoside" bei diesem Befehl einfügen und die beiden Befehle in Zeile 33+34 auskommentieren
 \usepackage[utf8]{inputenc} %Zeichenkodierung in UTF8
 \usepackage[T1]{fontenc} %westeuropäischer Codierung der Schriftart
 \usepackage[onehalfspacing]{setspace}
@@ -12,50 +12,48 @@
 \usepackage{lmodern} %Bessere Standardschriftart
 \usepackage{bibgerm} %Paket für deutsche Literaturverzeichnisse
 \usepackage{cite} %Sortierung und Kompression von Ziations-Nummern
-\usepackage{float} %Basispaket für Floats
-\usepackage{array,booktabs} %verbesserte array und tabular-Umgebung ftp://ftp.fu-berlin.de/tex/CTAN/macros/latex/required/tools/array.pdf
-	% eigene Befehle für die Zeilenausrichtung in Tabellen. Siehe http://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
-	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\usepackage{graphicx} %Ermöglicht Einbindung von Grafiken
-\usepackage[space]{grffile} %Erlaubt, mit graphix Dateinamen mit Leerzeichen einzubinden
-\usepackage{url} %ermöglicht das einbinden klickbarer URLs
-\usepackage{lscape} %Querformat-Darstellung einzelner Seiten
-\usepackage{pdflscape} %Drehung dieser Seiten im PC in pdf-Readern
-\usepackage{booktabs} % publikationsreife Tabellen
-\usepackage{acronym} % Abkürzungen werden beim ersten mal ausgeschrieben, danach abgekürzt
+\usepackage[nottoc]{tocbibind} %Nummerierter Inhaltsverzeichnis-Eintrag für das Literaturverzeichnis
 \usepackage[headsepline]{scrlayer-scrpage}
 \automark[section]{chapter} %betitelt rechte und linke Seiten mit der Kapitelüberschrift
 	\renewcommand*{\chaptermarkformat}{} %keine Chapternummern in Header
 	\renewcommand*{\sectionmarkformat}{} %keine Sectionnummern in Header
-%=============
+%=======================
 % die folgenden zwei Befehle auskommentieren, wenn in Zeile 7 die twoside-Option aktiviert wurde
 \ihead{\headmark} %Header soll immer links gesetzt werden (i=innen, da einseitig=nur rechte Seiten bedeutet)
 \chead{} %center Header leer
 % die obigen zwei Befehle auskommentieren, wenn in Zeile 7 die twoside-Option aktiviert wurde
-%=============
+%=======================
 \renewcommand*\chapterpagestyle{scrheadings} %alle Chapter verwenden die Kopf- und Fußzeile
-\usepackage{pdfpages} %pdf-Dateien einbinden
-\usepackage{textcomp} % U.a. für Trademark Zeichen (\textsuperscript{TM} or \texttrademark)
+\usepackage{float} %Basispaket für Floats
 \usepackage[format=plain,labelfont=bf,font=small]{caption} %angepasste Abbildungs- und Tabellen-Beschriftungen (http://www.ctan.org/pkg/caption)
-\usepackage{textgreek} %Erlaubt Druck von aufrechten griechischen Buchstaben im Text
+\usepackage{array,booktabs} %verbesserte array und tabular-Umgebung
+% eigene Befehle für die Zeilenausrichtung in Tabellen. Siehe http://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+	\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage{multirow} %erlaubt in einer Tabelle das Setzen von Text über mehrere Tabellen-Zeilen
-\usepackage{varwidth}
-\usepackage{amsmath} %Bessere Mathematikbereiche
 \usepackage[all]{nowidow} %Vermeidet Hurensöhne und Schusterjungen
-\usepackage[nottoc]{tocbibind} %Nummerierter Inhaltsverzeichnis-Eintrag für das Literaturverzeichnis
+\usepackage{pdfpages} %pdf-Dateien einbinden
+\usepackage{lscape,pdflscape} %Querformat-Darstellung einzelner Seiten
+\usepackage{acronym} % Abkürzungen werden beim ersten mal ausgeschrieben, danach abgekürzt
+\usepackage{graphicx} %Ermöglicht Einbindung von Grafiken
+\usepackage[space]{grffile} %Erlaubt, mit graphix Dateinamen mit Leerzeichen einzubinden
+\usepackage{amsmath} %Bessere Mathematikbereiche
+\usepackage{varwidth} %Erlaubt erstellen von Minipages mit variabler Breite
+\usepackage{textcomp} % U.a. für Trademark Zeichen (\textsuperscript{TM} or \texttrademark)
+\usepackage{textgreek} %Erlaubt Druck von aufrechten griechischen Buchstaben im Text
+
 \usepackage{todonotes} %erlaubt das einfügen von \todo{To-Dos}
 
 %--------Für URL-Breaks in der Bibliographie siehe  https://norwied.wordpress.com/2012/07/10/how-to-break-long-urls-in-bibtex/]
-\usepackage{url}
+\usepackage{url} %ermöglicht das einbinden klickbarer URLs
 \def\UrlBreaks{\do\/\do-\do_\do.\do?}
 \usepackage[breaklinks,hidelinks]{hyperref}
 %-------------------------------------------------------
 
 
 %////////////////////////
-%     Eigene Befehle
+%     Eigene Befehle -> Hier sind als Beispiele einige eigene LaTeX-Befehle definiert
 \clearpage
 \newcommand{\mul}{\textmu l }
 \newcommand{\gradc}{$^\circ$C }
@@ -73,8 +71,8 @@
 	\thispagestyle{empty}
 	\vspace*{\fill}
 	\begin{center}
-	Dekan: Prof. Dr. Dagobert Duck\\
-	Referent: PD. Dr. med. Mickey Maus
+	Dekan: Prof. Dr. Dekan\\
+	Referent: PD. Dr. med. Referent
          \end{center}
 %--------------------------------------------------------------------------------------------------
 %     Beginn des Dokuments
@@ -93,9 +91,9 @@
 
 \chapter*{Abkürzungsverzeichnis} 
 \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis} \label{sec:abk_Verz}
-\begin{acronym}[ABC] %längstes Akronym, wird als Mindestabstand verwendet
-	\acro{EH}{Entenhausen}
-	\acro{PK}{Panzerknacker}
+\begin{acronym}[ABCDE] %längstes Akronym, wird als Mindestabstand verwendet
+	\acro{BSP}{Beispiel}
+	\acro{MedMa}{Medizin Mannheim}
 \end{acronym}
 
 %----------------------------------------------------------------------------
@@ -105,15 +103,15 @@
 \section{Diese Vorlage}
 Dies Vorlage für eine Dissertation an der Medzinischen Fakultät Mannheim der Universität wurde von Yannic Meyer auf der Basis der Vorarbeit von Patrick Järgen und Julian Gehweiler erstellt und Form und Aufbau sollen noch von der Promotionskommission abgesegnet werden. 
 
-In den folgenden Abschnitten finden Sie einige knappe Hinweise zu LaTeX selbst und zur Verwendung dieser Vorlage. 
+Für die Abfassung der Dissertation beachten Sie bitte die entsprechenden Hinweise und Richtinien der Fakultät. In den folgenden Abschnitten finden Sie einige knappe Hinweise zu LaTeX selbst und zur Verwendung dieser Vorlage. 
 
 \paragraph{Einseitiges und Zweiseitiges Layout}
-Standardmäßig ist diese Vorlage so eingestellt, dass der Satzspiegel auf der Seite horizontal zentriert wird, da dies für die Betrachtung des generierten PDFs am PC deutlich angenehmer ist. Für einen zweiseitigen Satz, bei dem der Satzspiegel an der Innenfalz einen engeren Abstand hat als beispielsweise zum Rand nach außen kann in der Präambel in Zeile 6 die Option \verb|twoside| eingefügt und Zeile 34 und 35 mit \verb|%| auskommentiert werden. 
+Standardmäßig ist diese Vorlage so eingestellt, dass der Satzspiegel auf der Seite horizontal zentriert wird, da dies für die Betrachtung des generierten PDFs am PC deutlich angenehmer ist. Für einen zweiseitigen Satz, bei dem der Satzspiegel an der Innenfalz einen engeren Abstand hat als beispielsweise zum Rand nach außen kann in der Präambel in Zeile 6 die Option \verb|twoside| eingefügt und Zeile 33 und 34 mit \verb|%| auskommentiert werden. 
 
 \paragraph{Das Deckblatt} wird in diesem Template mittels der Datei \verb|Deckblatt.tex| separat generiert und das PDF dann hier eingebunden. 
 
 \section{Hinweise zu \LaTeX}
-\LaTeX ist eine Textsatzsprache, die sehr schönen Textsatz ermöglicht, sich sehr gut für die Erstellung von Formeln eignet und die Anfertigung von Verzeichnissen (Inhalt, Abbildungen, Tabellen etc.) und Verweisen auf sehr einfach ermöglicht. Tabellenerstellung oder die Veränderung des verwendeten Templates ist sind dafür aufwändiger als z.B. in Word. 
+\par{\LaTeX} ist eine Textsatzsprache, die sehr schönen Textsatz ermöglicht, sich sehr gut für die Erstellung von Formeln eignet und die Anfertigung von Verzeichnissen (Inhalt, Abbildungen, Tabellen etc.) und Verweisen auf sehr einfach ermöglicht. Tabellenerstellung oder die Veränderung des verwendeten Templates ist sind dafür aufwändiger als z.B. in Word. 
 
 In dieser Dissertationsvorlage der \textit{Medizinischen Fakultät Mannheim} finden Sie in den folgenden Abschnitten einige Beispiele zu Verwendung des Templates. Als Einstieg in LaTeX  ist  \textit{LaTeX - Eine Einführung und ein bisschen mehr} \cite{LaTeX_Guide_1} der \textit{Fernuni Hagen} geeignet, um die zu Grunde liegenden Prinzipien zu erlernen. Es steht auch ein erweiterter Guide (\textit{LaTeX - Fortgeschrittene Anwendungen oder neues von den Hobbits}) \cite{LaTeX_Guide_2} zur Verfügung. Für nahezu alle weiteren Probleme hilft eine kurze Recherche bei einer Suchmaschine der Wahl weiter - meist wird man auf \url{https://tex.stackexchange.com} fündig. 
 
@@ -165,7 +163,7 @@ Eine Anleitung zur Erstellung übersichtlicher und visuell ansprechender Tabelle
 \section{Querverweise und Abkürzungsverzeichnis} \label{sec:verweise}
 Zur Verwendung von \textbf{Querverweisen} kann an jeder Stelle im Text ein \verb|\label{label}| platziert werden, dessen Nummer mit \verb|\ref{label}| und dessen Seitenzahl mit \\ \verb|\pageref{label}| abgerufen werden kann. Befindet sich das Label einfach im Text wird die Nummer des Abschnittes zugewiesen, befindet sich das Label in einer Abbildung oder Tabelle wird die entsprechende Nummer der fortlaufenden Abbildungs- und Tabellen-Nummerierung ausgegeben (So trägt dieser Abschnitt die Nummer \ref{sec:verweise} und befindet sich auf S. \pageref{sec:verweise}). 
 
-Ein \textbf{Abkürzungsverzeichnis} kann wie auf S. \pageref{sec:abk_Verz} definiert und auf die Abkürzungen mittels \verb|\ac{Abkürzung}| zugegriffen werden. In der aktuellen Konfiguration wird bei der ersten Nennung die Lang- und Kurzebezeichnung (\ac{EH}) ausgegeben, bei weiteren dann nur die Kurzbezeichnung (\ac{EH}). 
+Ein \textbf{Abkürzungsverzeichnis} kann wie auf S. \pageref{sec:abk_Verz} definiert und auf die Abkürzungen mittels \verb|\ac{Abkürzung}| zugegriffen werden. In der aktuellen Konfiguration wird bei der ersten Nennung die Lang- und Kurzebezeichnung (\ac{BSP}) ausgegeben, bei weiteren dann nur die Kurzbezeichnung (\ac{BSP}). 
 
 
 \section{Bibliographie}
@@ -183,7 +181,13 @@ Mit dem \verb|todonotes|-Paket kann eine To-Do-Liste geführt werden. Die Notize
 \chapter{Material und Methoden}\label{sec:materialmethoden}
 
 \section{Sektion}\label{sec:Sektion1}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 \section{Subsektion}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\subsubsection{Sub-Subsektion} 
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\paragraph{Absatzüberschrift}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 
 %--------------------------------------------------------------------------------------------------
@@ -245,23 +249,23 @@ Mit dem \verb|todonotes|-Paket kann eine To-Do-Liste geführt werden. Die Notize
 \begin{tabular}{p{4cm}l}
 	\multicolumn{2}{l}{{\large \scshape{Personalien}}} \\[0,6em]
 	
-	Name und Vorname:	& Donald Duck \\[0,5em]
+	Name und Vorname:	& Marina Musterfrau \\[0,5em]
 	
-	Geburtsdatum: 		& 09.06.1934 \\[0,5em]
+	Geburtsdatum: 		& 01.01.1970 \\[0,5em]
 	
-	Geburtsort: 		& Entenhausen \\[0,5em]
+	Geburtsort: 		& Mannheim \\[0,5em]
 	
 	Familienstand: 		& Ledig\\[0,5em]
 	
-	Vater: 				& Degenhard Duck\\[0,5em]
+	Vater: 				& Maximilian Musterfrau \\[0,5em]
 	
-	Mutter: 			& Dortel Duck\\[0,5em]
+	Mutter: 			& Mörte Musterfrau \\[0,5em]
 	& \\[0,5em]
 	\multicolumn{2}{l}{{\Large \scshape{Schulischer Werdegang}}} \\[0,6em]
 	
-	1940 - 1944: 	& Grundschule Entenhausen\\[0,5em]
+	1976 - 1980: 	& Grundschule Mannheim\\[0,5em]
 
-	1944 - 1952: 	& Gymnasium Entenhausen\\[0,5em]
+	1980 - 1990: 	& Gymnasium Mannheim\\[0,5em]
 
 	Abitur: 			& 09.06.1952 \\[0,5em]
 	&\\[0,5em]
