@@ -9,7 +9,7 @@
 \usepackage[onehalfspacing]{setspace}
 \KOMAoptions{DIV=12} %Einstellung des Satzspiegels
 \usepackage[ngerman]{babel} %Trennungsregeln und autom. Überschriften in n. dt. RS
-\usepackage{lmodern} %Bessere Standardschriftart
+\usepackage{lmodern} %Verbesserte Standardschriftart
 \usepackage{bibgerm} %Paket für deutsche Literaturverzeichnisse
 \usepackage{cite} %Sortierung und Kompression von Ziations-Nummern
 \usepackage[nottoc]{tocbibind} %Nummerierter Inhaltsverzeichnis-Eintrag für das Literaturverzeichnis
@@ -33,16 +33,20 @@
 	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \usepackage{multirow} %erlaubt in einer Tabelle das Setzen von Text über mehrere Tabellen-Zeilen
 \usepackage{graphicx} %Ermöglicht Einbindung von Grafiken
-\usepackage{amsmath} %Bessere Mathematikbereiche
 \usepackage[space]{grffile} %Erlaubt, mit graphix Dateinamen mit Leerzeichen einzubinden
+\usepackage{amsmath} %Bessere Mathematikbereiche
 \usepackage[all]{nowidow} %Vermeidet Hurensöhne und Schusterjungen
 \usepackage{pdfpages} %pdf-Dateien einbinden
 \usepackage{lscape,pdflscape} %Querformat-Darstellung einzelner Seiten
 \usepackage{acronym} % Abkürzungen werden beim ersten mal ausgeschrieben, danach abgekürzt
-\usepackage{varwidth} %Erlaubt erstellen von Minipages mit variabler Breite
 \usepackage{textcomp} % U.a. für Trademark Zeichen (\textsuperscript{TM} or \texttrademark)
-\usepackage{textgreek} %Erlaubt Druck von aufrechten griechischen Buchstaben im Text
 \usepackage{todonotes} %erlaubt das einfügen von \todo{To-Dos}
+
+%--------Hilfreiche, aber für das Template nicht zwingend notwendige Pakete. Zur Aktivierung einfach einkommentieren
+% \usepackage{textgreek} %Erlaubt Druck von aufrechten griechischen Buchstaben im Text
+% \usepackage{siunitx} %Ermöglicht erzeugung komplexerer Maßeinheiten
+% \usepackage{varwidth} %Erlaubt erstellen von Minipages mit variabler Breite
+%-------------------------------------------------------
 
 %--------Für URL-Breaks in der Bibliographie 
 % (siehe https://norwied.wordpress.com/2012/07/10/how-to-break-long-urls-in-bibtex/)
@@ -55,8 +59,7 @@
 %////////////////////////
 %     Eigene Befehle -> Hier sind als Beispiele einige eigene LaTeX-Befehle definiert
 \clearpage
-\newcommand{\mul}{\textmu l }
-\newcommand{\gradc}{$^\circ$C }
+\newcommand\worry[1]{\textcolor{red}{\textbf{#1}}}
 \newcommand{\registered}{\textsuperscript{\textregistered}}
 %////////////////////////
 
