@@ -3,10 +3,11 @@
 %     Präambel
 %----------------------------------------------------------------------------
 \documentclass{scrreprt}
-\KOMAoptions{fontsize=12pt,DIV=calc} %Für druckreifen, zweiseitigen-Satzspiegel die Option "twoside" bei diesem Befehl einfügen und die beiden Befehle in Zeile 22+23 auskommentieren
+\KOMAoptions{fontsize=12pt,DIV=calc} %Für druckreifen, zweiseitigen-Satzspiegel die Option "twoside" bei diesem Befehl einfügen und die beiden Befehle in Zeile 23+24 auskommentieren
 \usepackage[utf8]{inputenc} %Zeichenkodierung in UTF8
 \usepackage[T1]{fontenc} %westeuropäischer Codierung der Schriftart
 \usepackage[onehalfspacing]{setspace} %Stellt den Zeilenabstand ein
+\setstretch{1.5}
 \KOMAoptions{DIV=12} %Einstellung des Satzspiegels
 \usepackage[ngerman]{babel} %Trennungsregeln und autom. Überschriften in n. dt. RS
 \usepackage{lmodern} %Verbesserte Standardschriftart
@@ -107,24 +108,23 @@
 %--------------------------------------------------------------------------------------------------
 \chapter{Einleitung}
 \section{Diese Vorlage}
-Diese Vorlage für eine Dissertation an der Medzinischen Fakultät Mannheim der Universität wurde von Yannic Meyer auf der Basis der Vorarbeit von Patrick Järgen und Julian Gehweiler erstellt und Form und Aufbau sollen noch von der Promotionskommission abgesegnet werden. 
+Diese Vorlage für eine Dissertation an der Medzinischen Fakultät Mannheim der Universität wurde von Yannic Meyer auf der Basis der Vorarbeit von Patrick Järgen und Julian Gehweiler erstellt.
 
-Für die Abfassung der Dissertation sind die entsprechenden Hinweise und Richtlinien der Fakultät zu beachten. In den folgenden Abschnitten finden Sie einige knappe Hinweise zu LaTeX selbst und zur Verwendung dieser Vorlage. 
+Für die Abfassung der Dissertation sind die entsprechenden Hinweise und Richtlinien der Fakultät zu beachten. In den folgenden Abschnitten finden Sie einige Hinweise zu LaTeX selbst und zur Verwendung dieser Vorlage. 
 
 \paragraph{Einseitiges und Zweiseitiges Layout}
-Standardmäßig ist diese Vorlage so eingestellt, dass der Satzspiegel auf der Seite horizontal zentriert wird, da dies für die Betrachtung des generierten PDFs am PC deutlich angenehmer ist. Für einen zweiseitigen Satz, bei dem der Satzspiegel an der Innenfalz einen engeren Abstand hat als beispielsweise zum Rand nach außen kann in der Präambel in Zeile 6 die Option \verb|twoside| eingefügt und Zeile 22 und 23 mit \verb|%| auskommentiert werden. 
+Standardmäßig ist diese Vorlage so eingestellt, dass der Satzspiegel auf der Seite horizontal zentriert wird, da dies für die Betrachtung des generierten PDFs am PC deutlich angenehmer ist. Für einen zweiseitigen Satz, bei dem der Satzspiegel an der Innenfalz einen engeren Abstand hat als beispielsweise zum Rand nach außen kann in der Präambel in Zeile 6 die Option \verb|twoside| eingefügt und Zeile 23 und 24 mit \verb|%| auskommentiert werden. 
 
 \section{Hinweise zu \LaTeX}
 \par{\LaTeX} ist eine Textsatzsprache, die schönen Textsatz ermöglicht, sich sehr gut für die Erstellung von Formeln eignet und die Anfertigung von Verzeichnissen (Inhalt, Abbildungen, Tabellen etc.) und Verweisen vereinfacht. Tabellenerstellung oder die Veränderung des verwendeten Templates ist sind dafür aufwändiger als z.B. in MS Word. 
 
-In dieser Dissertationsvorlage der \textit{Medizinischen Fakultät Mannheim} finden Sie in den folgenden Abschnitten einige Beispiele zu Verwendung des Templates. Als Einstieg in LaTeX  ist  \textit{LaTeX - Eine Einführung und ein bisschen mehr} der \textit{Fernuni Hagen} geeignet, um die zu Grunde liegenden Prinzipien zu erlernen \cite{LaTeX_Guide_1}. Es steht auch ein erweiterter Guide (\textit{LaTeX - Fortgeschrittene Anwendungen oder neues von den Hobbits}) zur Verfügung \cite{LaTeX_Guide_2}. Für nahezu alle weiteren Probleme hilft in der Regel eine kurze Recherche bei einer Suchmaschine der Wahl weiter - meist wird man auf \url{https://tex.stackexchange.com} fündig. 
+In den folgenden Abschnitten finden Sie einige Beispiele zu Verwendung des Templates. Als Einstieg in LaTeX  ist  \textit{LaTeX - Eine Einführung und ein bisschen mehr} der \textit{Fernuni Hagen} geeignet, um die zu Grunde liegenden Prinzipien zu erlernen \cite{LaTeX_Guide_1}. Es steht auch ein erweiterter Guide (\textit{LaTeX - Fortgeschrittene Anwendungen oder neues von den Hobbits}) zur Verfügung \cite{LaTeX_Guide_2}. 
 
 \section{Abbildungen und Tabellen}
 
 Abbildungen und Tabellen können als sog. \textit{floats} gesetzt werden und tauchen daher nicht, wie man es evtl. aus Word kennt, \textit{zwingend} an der Stelle im Text, wo sie definiert sind, sondern LaTeX versucht, sie nach einem gewissen Regelwerk optimal unterzubringen. Die Definition \verb|htpb| gibt an, dass der \textit{float} \verb|here|, auf der oberen (\verb|top|) oder unteren (\verb|bottom|) Hälfte einer Seite oder auf einer eigenen Seite (\verb|page|) gesetzt wird. Mit der Option \verb|H| kann die Positionierung an Ort und Stelle erzwungen werden. Die Optimierung der Abbildungsplatzierung sollte möglichst erst gegen Ende der Fertigstellung der Dissertation erfolgen, um erneute Verschiebungen durch Textveränderungen zu vermeiden. 
 
-Eine Anleitung zur Erstellung übersichtlicher und visuell ansprechender Tabellen findet sich in der Dokumentation des Paketes \verb|booktabs| auf \url{http://ftp.math.purdue.edu/mirrors/ctan.org/macros/latex/contrib/booktabs-de/booktabs-de.pdf}. Zur Erstellung von Abbildungen gibt es von Rougier et al. ein paar hilfreiche Hinweise auf \url{http://dx.plos.org/10.1371/journal.pcbi.1003833} \cite{Rougier2014}. 
-\vspace*{0.6cm}
+Eine Anleitung zur Erstellung übersichtlicher und visuell ansprechender Tabellen findet sich in der Dokumentation des Paketes \verb|booktabs| auf \url{http://ftp.math.purdue.edu/mirrors/ctan.org/macros/latex/contrib/booktabs-de/booktabs-de.pdf}. 
 
 \begin{figure}[htpb] %Beispielabbildung
 	{\centering
